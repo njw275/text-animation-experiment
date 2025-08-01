@@ -1,0 +1,60 @@
+:root {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.appWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+  max-width: 100%;
+  gap: 12px;
+}
+
+.inputWrapper {
+  margin-top: 10px;
+  position: relative;
+  z-index: 9;
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.input {
+  flex: 1;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.enterButton {
+  border: 2px solid black;
+  background: white;
+  color: black;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.linksContainer {
+  display: flex;
+  gap: 8px;
+
+  a {
+    color: white;
+    font-size: 20px;
+  }
+}

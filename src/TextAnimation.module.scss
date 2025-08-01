@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&display=swap");
+
+$gray: #c6c6c6;
+
+.font {
+  font-family: "Libre Caslon Display", serif;
+  text-transform: uppercase;
+  color: black;
+  font-size: 24px;
+
+  @include mq($from: tablet) {
+    font-size: 52px;
+  }
+}
+
+.wrapper {
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+  background: #c6c6c6;
+
+  max-width: 100%;
+}
+
+.wordWrapper {
+  position: relative;
+  display: flex;
+  margin: -15px 0;
+}
+
+.blurSvg {
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+}
+
+.bg {
+  position: relative;
+  background: $gray;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.lineContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.line {
+  position: relative;
+  z-index: 0;
+  background-color: #e0e002;
+  height: 100%;
+  width: 30px;
+  border: 2px solid black;
+  animation: slowMove 2s linear infinite;
+  flex-shrink: 0;
+}
+
+.line:nth-child(even) {
+  z-index: 2;
+  background: $gray;
+  border: none;
+}
+
+.portalWrapper,
+.bigGroup {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bigGroup {
+  filter: url(#goo-outline);
+}
+
+.portalWrapper {
+  z-index: 3;
+}
+
+.portalRoot {
+  position: relative;
+  display: flex;
+  margin: -15px 0;
+}
+
+.letter {
+  position: relative;
+  background: $gray;
+  padding: 15px;
+
+  z-index: 1;
+  --br: 12px;
+  border-radius: var(--br);
+
+  transform: translateX(-475px);
+}
+
+.inner {
+  position: relative;
+  padding: 15px;
+
+  z-index: 3;
+
+  transform: translateX(-475px);
+}
+
+@keyframes slowMove {
+  from {
+    transform: translateX(-200%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
